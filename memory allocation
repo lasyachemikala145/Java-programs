@@ -1,0 +1,9 @@
+package demo;
+
+public class Variable {
+    public static void main(String args[]) {
+        int a=27; // now initialized if we declare with out initialize then it shows The local variable a may not have been initialized error
+        int b=11;
+        System.out.println("a=" + a + " b=" + b);
+    }
+}
