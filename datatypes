@@ -1,0 +1,8 @@
+public class datatypes {
+	public static void main(String[] args) {
+		float f=5.3f;//in java by default double will consider to define float we have to mention f at the end of the float value
+		boolean b=true;
+		System.out.println(f);
+		System.out.println(b);
+	}
+}
