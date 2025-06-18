@@ -1,0 +1,27 @@
+package demo;
+
+public class Typeconversionandtypecast {
+	public static void main(String []args) {
+		byte b=120;//range -> -128 to 127
+		char c='l';
+		short s=236;
+		int i=128;
+		long l=2345l;
+		float f=5.3f;
+		double d=2.34;
+		i=b;//conversion(implicity)
+		System.out.println(i);
+		d=f;
+		System.out.println(d);
+		i=c;
+		System.out.println(i);
+		b=(byte) i;
+		System.out.println(b);
+		i=(int)l;//type casting(explicity)
+		System.out.println(i);
+		
+		
+		
+	}
+
+}
