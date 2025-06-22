@@ -1,0 +1,23 @@
+package demo;
+
+class Example{
+	int a;//its a class file in this we have to create properties and functionalities
+	public int add(int x,int y) {
+		//x,y are instant variables
+		int z=x+y;
+		return z;
+		
+	}
+}
+public class ObjectAndClass {
+
+	public static void main(String[] args) {
+		int num1=15;
+		int num2=12;
+		Example ex=new Example();
+		int result =ex.add(num1,num2);
+		System.out.println("the result"+result);
+		// TODO Auto-generated method stub
+
+	}
+}
