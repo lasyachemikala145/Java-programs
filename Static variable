@@ -1,0 +1,21 @@
+package demo;
+import java.util.Random;
+
+public class Test1 {
+	static int num1;
+
+	public static void main(String[] args) {
+		System.out.println(Test.num);
+		//we can access the ststic variable from one class to another class by use (class name.variable)
+		Test1.num1=new Random().nextInt();//for static variable we neednot to create objects
+		Test1.num1=new Random().nextInt();
+		Test1 t1=new Test1();
+		t1.num1=new Random().nextInt();
+		System.out.println(Test1.num1);
+		System.out.println(Test1.num1);
+		System.out.println(t1.num1);//static variavle is also called shared variable
+		
+
+	}
+
+}
