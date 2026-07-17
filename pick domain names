@@ -1,0 +1,36 @@
+package com.stringpractice;
+
+import java.util.Scanner;
+import java.util.TreeSet;
+
+public class Picknamesinurl {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		String s=sc.nextLine();
+		String[] s1=s.split(",");
+		TreeSet<String> ts=new TreeSet<String>();
+		for(int i=0;i<s1.length;i++) {
+			// to get names in url split every string every string in array
+			String[] ar=s1[i].split("\\.");//"." this is reg expression so trest it like a normal . use\\
+			//example http//www.google.com
+			//so now it look like http//www(0 index) google(index 1) com(index2)
+			//our question is get names without duplicates and in sorted order so use treeset and add
+			ts.add(ar[1]);
+			}
+		//print
+		for(String ss:ts) {
+			System.out.println(ss);
+		}
+
+	}
+
+}
+/*
+ *i/p:https://www.google.com,https://www.youtube.com,http://mail.google.com,https://docs.oracle.com/javase
+ *output:
+google
+oracle
+youtube
+*/
