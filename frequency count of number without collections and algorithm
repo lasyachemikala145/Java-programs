@@ -1,0 +1,63 @@
+package com.stringpractice;
+
+import java.util.Scanner;
+
+public class FrequencyofLetter {
+	public static void print(String s) {
+		int count=0;
+		for(int i=0;i<s.length();i++) {//outer loop
+			if(Character.isWhitespace(s.charAt(i))) {//" " white space continue
+				continue;// i need to print only charcters and digits and spl character
+			}
+			//if i need to print both letters ,didgits 
+			//(!Charcter.LetterOrDigit){continue}; so this can continue except Letter and digit
+			
+			
+			//to check whether the character appears befor 
+			boolean alreadyCount=false;
+			for(int k=0;k<i;k++) {//inner loop
+				if(s.charAt(i)==s.charAt(k)) {
+					alreadyCount=true;// if appear true
+					break;//skip inner loop 
+				}
+			}
+			if(alreadyCount) {// if(true)->sikp the current iteration 
+				//ex:if i=4 then skip this iteration go to i=5
+				continue;
+			}
+			//frequency
+			for(int j=i;j<s.length();j++) {
+				if(s.charAt(i)==s.charAt(j)) {
+					count++;
+				}
+				
+			}
+			
+			System.out.println(s.charAt(i)+":"+count);
+			count=0;
+		}
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		String s=sc.nextLine();
+		print(s);
+	}
+
+}
+/*
+ * 1.read string
+ * 2.my requirements
+ * 3.we need to check whther the letter appear befor or not  
+ * hi world!
+h:1
+i:1
+w:1
+o:1
+r:1
+l:1
+d:1
+!:1
+
+ */
