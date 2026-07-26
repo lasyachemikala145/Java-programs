@@ -1,0 +1,42 @@
+package com.ArrayPractice;
+
+import java.util.Scanner;
+
+public class Frequencycount {
+	public static void print(int[] ar) {
+		int count=0;
+		for(int i=0;i<ar.length;i++) {//this is outter loop 
+			// Check if the element was already counted
+            boolean alreadyCounted = false;
+
+            for (int k = 0; k < i; k++) {//this is inner loop
+                if (ar[i] == ar[k]) {
+                    alreadyCounted = true;
+                    break;//skip inner loop 
+                }
+            }
+
+            if (alreadyCounted) {// true excute 
+                continue;// the the current iteration 
+            }
+			for(int j=i;j<ar.length;j++) {
+				if(ar[i]==ar[j])
+				{
+					count++;
+				}
+			}
+				System.out.println(ar[i]+":"+count);
+			count=0;
+		}
+	}
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int[] ar=new int[n];
+		for(int i=0;i<ar.length;i++) {
+			ar[i]=sc.nextInt();
+		}
+		print(ar);
+	}
+
+}
